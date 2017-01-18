@@ -1,0 +1,2 @@
+#!/bin/bash
+amixer sget Master|grep "Front Left:"|awk '{print substr($5, 2, length($5)-3)}'
