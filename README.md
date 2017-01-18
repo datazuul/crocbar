@@ -9,3 +9,5 @@ $ make all
 # Configuration
 You then need to configure the crocbar from the config.xml file provided in bin/
 
+Help is provided on: http://wikisec.free.fr/dev/crocbar.html
+
