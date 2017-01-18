@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<CrocBarConfiguration>
+<CrocBarSizeAttributes x="5" y="5" width="100" height="200" />
+<CrocBarColorAttributes bg="50,40,40, 125" fg="42,218,33" />
+<CrocBarTableAttributes cellx="2" celly="2" />
+<CrocBarFaceAttributes nb_of_face="1" />
+
+<CrocWidget type="Twitter" face="0" poscellx="0" poscelly="0" nbcellx="1" nbcelly="2" bg="50,40,40, 125" fg="255,166,38">
+<ExtraParams>
+<ExecutePath value="/export/home/axelle/softs/tweepy/mytweepy.py" />
+<PathToNormalIcon value="images/twitter-32x32.png" />
+<PathToActiveIcon value="images/twitter-48x48.png" />
+</ExtraParams>
+</CrocWidget>
+
+
+
+</CrocBarConfiguration>

@@ -31,7 +31,9 @@ CROCBAR_DOC = $(CROCBAR_PATH)/doc
 JAVAMAIL_JAR =$(CROCBAR_BIN)/mail.jar
 
 
-all:
+all: javasrc thebin
+
+javasrc:
 #	date
 #	svn update build.txt src/ui/DefaultText.java
 #	$(JAVA) -jar $(BUILDER) $(BUILD_INFO) $(BUILD_TO_MODIFY)
@@ -40,12 +42,9 @@ all:
 
 thebin:
 	rm -f $(CROCBAR_BIN)/$(CROCBAR_BINARY)
-	cd $(CROCBAR_SRC);  $(JAR) cmf $(CROCBAR_JAR_TXT) $(CROCBAR_BIN)/$(CROCBAR_BINARY) CrocBar.class crocwidget/*.class myutil/*.class uicrocbar/*.class  crocwidget/images/* javax/mail/*.class javax/mail/event/*.class  javax/mail/internet/*.class javax/mail/search/*.class javax/mail/util/*.class com/sun/mail/*/*.class com/sun/mail/*/*/*.class
-	cp $(CROCBAR_SRC)/$(CROCBAR_CONFIG_SRC) $(CROCBAR_BIN)/
-
-crocbarjar: thebin
-	cp  $(CROCBAR_BIN)/$(CROCBAR_BINARY) $(CROCBAR_PUB)
-	cp $(CROCBAR_SRC)/$(CROCBAR_CONFIG_SRC)  $(CROCBAR_PUB)
+	cd $(CROCBAR_SRC);  $(JAR) cmf $(CROCBAR_JAR_TXT) $(CROCBAR_BIN)/$(CROCBAR_BINARY) CrocBar.class crocwidget/*.class myutil/*.class uicrocbar/*.class  crocwidget/images/*
+#javax/mail/*.class javax/mail/event/*.class  javax/mail/internet/*.class javax/mail/search/*.class javax/mail/util/*.class com/sun/mail/*/*.class com/sun/mail/*/*/*.class
+#	cp $(CROCBAR_SRC)/$(CROCBAR_CONFIG_SRC) $(CROCBAR_BIN)/
 
 documentation:
 	$(JAVADOC) $(CLASSPATH) $(CROCBAR_SRC) -d $(CROCBAR_DOC) $(CROCBAR_SRC)/*.java $(CROCBAR_SRC)/*/*.java 
