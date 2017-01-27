@@ -54,7 +54,7 @@
 <ShowLabel value="true" />
 <UpdateTime value="2" />
 <NbOfLines value="5" />
-<Command value="topprocesses" />
+<Command value="./topprocesses" />
 <FontColor value="255, 166, 38" />
 </ExtraParams>
 </CrocWidget>
@@ -269,7 +269,7 @@
 <CrocWidget type="RetrievePictureAndDisplay" face="1" poscellx="0" poscelly="23" nbcellx="4" nbcelly="3" bg="50,40,40" fg="255,166,38">
 <ExtraParams>
 <PathToFile value="../tmp/tempbiotmeteo.png" />
-<PathToCommand value="curltempbiotmeteo" />
+<PathToCommand value="./curltempbiotmeteo" />
 <UpdateRate value="300000" />
 </ExtraParams>
 </CrocWidget> 
@@ -278,7 +278,7 @@
 <CrocWidget type="RetrievePictureAndDisplay" face="1" poscellx="0" poscelly="28" nbcellx="4" nbcelly="3" bg="50,40,40" fg="255,166,38">
 <ExtraParams>
 <PathToFile value="../tmp/radar.jpg" />
-<PathToCommand value="curlradar" />
+<PathToCommand value="./curlradar" />
 <UpdateRate value="300000" />
 </ExtraParams>
 </CrocWidget> 
