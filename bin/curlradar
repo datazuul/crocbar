@@ -1,0 +1,2 @@
+#!/bin/bash
+curl http://www.infoclimat.fr/api/AH4EMQcrAzhVYQQtVWdXNFw2BXhQOAEpDm0PZAc1AC8AYQIzVGcHNFFlVWIFNAdjAW9RM1EzBzNWNg5n/radar/sud_est?c6efb45b781de49d57c2c0aa20e8057c > ../tmp/radar.jpg

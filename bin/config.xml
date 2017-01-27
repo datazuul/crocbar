@@ -1,19 +1,325 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
 <CrocBarConfiguration>
-<CrocBarSizeAttributes x="5" y="5" width="100" height="200" />
-<CrocBarColorAttributes bg="50,40,40, 125" fg="42,218,33" />
-<CrocBarTableAttributes cellx="2" celly="2" />
-<CrocBarFaceAttributes nb_of_face="1" />
+<CrocBarSizeAttributes x="-5" y="50" width="110" height="1000" />
+<CrocBarColorAttributes bg="50,40,40, 0" fg="42,218,33" />
+<CrocBarTableAttributes cellx="4" celly="40" />
+<CrocBarFaceAttributes nb_of_face="2" />
 
-<CrocWidget type="Twitter" face="0" poscellx="0" poscelly="0" nbcellx="1" nbcelly="2" bg="50,40,40, 125" fg="255,166,38">
+<!-- All faces -->
+
+<CrocWidget type="MultiplePictures" poscellx="0" poscelly="0" nbcellx="4" nbcelly="3" bg="50,40,40, 0" fg="255,166,38">
 <ExtraParams>
-<ExecutePath value="/export/home/axelle/softs/tweepy/mytweepy.py" />
-<PathToNormalIcon value="images/twitter-32x32.png" />
-<PathToActiveIcon value="images/twitter-48x48.png" />
+<PathToLocalFile value="images.conf" />
+<WaitingTime value="30000" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="TimeAndDate" poscellx="0" poscelly="3" nbcellx="4" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<ShowSeconds value="false" />
+<ShowYear value="false" />
+<Alarm value="12:00" label="Lunch time" />
+<FontColor value="249, 36, 36" />
+<FontSize value="14" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="CPULoad" poscellx="0" poscelly="5" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<ShowLabel value="true" />
+<Label value="xload" />
+<UpdateTime value="5" />
+<LoadCommand value="uptime" />
+<OS value="Linux" />
+<FontColor value="255, 166, 38" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="MemoryLoad" poscellx="2" poscelly="5" nbcellx="2" nbcelly="2" borderX="1" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<ShowLabel value="true" />
+<Label value="RAM" />
+<UpdateTime value="10" />
+<OS value="Detect" />
+<FontColor value="255, 166, 38" />
 </ExtraParams>
 </CrocWidget>
 
 
+
+<CrocWidget type="Executor" poscellx="0" poscelly="7" nbcellx="4" nbcelly="3" borderX="1" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<Label value="Top" />
+<ShowLabel value="true" />
+<UpdateTime value="2" />
+<NbOfLines value="5" />
+<Command value="topprocesses" />
+<FontColor value="255, 166, 38" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="HDSize" poscellx="0" poscelly="10" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<Path value="/homes/" />
+<Label value="homes" />
+<UpdateTime value="60" />
+<FontColor value="255, 166, 38" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="HDSize" poscellx="0" poscelly="12" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<Path value="/" />
+<Label value="localhost" />
+<UpdateTime value="60" />
+<FontColor value="255, 166, 38" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="HDSize" poscellx="2" poscelly="12" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<Path value="/tmp" />
+<Label value="tmp" />
+<UpdateTime value="60" />
+<FontColor value="255, 166, 38" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon" poscellx="0" poscelly="40" nbcellx="1" nbcelly="1" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/arrow_left16.png" />
+<PathToActiveIcon value="images/arrow_left24.png" />
+<ExecutePath value="previousface" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon" poscellx="3" poscelly="40" nbcellx="1" nbcelly="1" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/arrow_right16.png" />
+<PathToActiveIcon value="images/arrow_right24.png" />
+<ExecutePath value="nextface" />
+</ExtraParams>
+</CrocWidget>
+
+
+<!-- Face #0 only -->
+
+<CrocWidget type="ToDo" face="0" poscellx="0" poscelly="14" nbcellx="4" nbcelly="3" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<FontColor value="255, 166, 38" />
+<FontSize value="9" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="0" poscelly="18" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/xfce-sound_32.png" />
+<PathToActiveIcon value="images/xfce-sound_48.png" />
+<ExecutePath value="/usr/bin/gnome-control-center sound" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="2" poscelly="18" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/administration_32.png" />
+<PathToActiveIcon value="images/administration_48.png" />
+<ExecutePath value="/usr/bin/gnome-control-center" />
+</ExtraParams>
+</CrocWidget> -->
+
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="1" poscelly="20" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/Gnome-Document-Open-32.png" />
+<PathToActiveIcon value="images/Gnome-Document-Open-48.png" />
+<ExecutePath value="/usr/bin/nautilus" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon" face="0" poscellx="0" poscelly="22" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/firefox-32x32.png" />
+<PathToActiveIcon value="images/firefox-48x48.png" />
+<ExecutePath value="firefox" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon" face="0" poscellx="2" poscelly="22" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/thunderbird-32x32.png" />
+<PathToActiveIcon value="images/thunderbird-48x48.png" />
+<ExecutePath value="thunderbird" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon" face="0" poscellx="0" poscelly="24" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/tor-32x32.png" />
+<PathToActiveIcon value="images/tor-48x48.png" />
+<ExecutePath value="tor-browser" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="2" poscelly="24" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/telegram-32x32.png" />
+<PathToActiveIcon value="images/telegram-48x48.png" />
+<ExecutePath value="Telegram" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="0" poscelly="26" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/gnome-terminal-32x32.png" />
+<PathToActiveIcon value="images/gnome-terminal-48x48.png" />
+<ExecutePath value="xterm" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="2" poscelly="26" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/Gnome-Computer-32.png" />
+<PathToActiveIcon value="images/Gnome-Computer-48.png" />
+<ExecutePath value="/usr/bin/terminator" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="0" poscelly="28" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/gimp-32x32.png" />
+<PathToActiveIcon value="images/gimp-48x48.png" />
+<ExecutePath value="gimp" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="2" poscelly="28" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/Gnome-Camera-Photo-32.png" />
+<PathToActiveIcon value="images/Gnome-Camera-Photo-48.png" />
+<ExecutePath value="/usr/bin/gnome-screenshot -a -f /homes/apvrille/shot.png" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="0" poscelly="30" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/evince-32x32.png" />
+<PathToActiveIcon value="images/evince-48x48.png" />
+<ExecutePath value="qpdfview" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="2" poscelly="30" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/Gnome-Accessories-Calculator-32.png" />
+<PathToActiveIcon value="images/Gnome-Accessories-Calculator-48.png" />
+<ExecutePath value="galculator" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon" face="0" poscellx="0" poscelly="32" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/odt32.png" />
+<PathToActiveIcon value="images/odt48.png" />
+<ExecutePath value="soffice" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="2" poscelly="32" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/spotify_32x32.png" />
+<PathToActiveIcon value="images/spotify_48x48.png" />
+<ExecutePath value="spotify" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="ActionIcon"  face="0" poscellx="1" poscelly="36" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToNormalIcon value="images/google_32.png" />
+<PathToActiveIcon value="images/google_48.png" />
+<ExecutePath value="firefox http://www.google.fr" />
+</ExtraParams>
+</CrocWidget>
+
+
+<!-- Face 1 only -->
+
+<CrocWidget type="MeteoRoquefort" face="1" poscellx="0" poscelly="15" nbcellx="4" nbcelly="4" bg="50,40,40" fg="255,166,38">
+<ExtraParams>
+<UpdateRate value="60000" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="CurveMeteoRoquefort" face="1" poscellx="0" poscelly="19" nbcellx="4" nbcelly="3" bg="50,40,40" fg="255,166,38">
+<ExtraParams>
+<UpdateRate value="60000" />
+</ExtraParams>
+</CrocWidget>
+
+<CrocWidget type="RetrievePictureAndDisplay" face="1" poscellx="0" poscelly="23" nbcellx="4" nbcelly="3" bg="50,40,40" fg="255,166,38">
+<ExtraParams>
+<PathToFile value="../tmp/tempbiotmeteo.png" />
+<PathToCommand value="curltempbiotmeteo" />
+<UpdateRate value="300000" />
+</ExtraParams>
+</CrocWidget> 
+
+
+<CrocWidget type="RetrievePictureAndDisplay" face="1" poscellx="0" poscelly="28" nbcellx="4" nbcelly="3" bg="50,40,40" fg="255,166,38">
+<ExtraParams>
+<PathToFile value="../tmp/radar.jpg" />
+<PathToCommand value="curlradar" />
+<UpdateRate value="300000" />
+</ExtraParams>
+</CrocWidget> 
+
+
+
+<CrocWidget type="RandomPictureWhenClick" face="1" poscellx="0" poscelly="33" nbcellx="4" nbcelly="3" bg="50,40,40" fg="255,166,38">
+<ExtraParams>
+<PathToImage value="images/icon-pico.jpg" />
+<PathToLocalFile value="bdpico.conf" />
+</ExtraParams>
+</CrocWidget>
+
+
+<CrocWidget type="Strawberry" face="1" poscellx="1" poscelly="37" nbcellx="2" nbcelly="2" bg="50,40,40, 0" fg="255,166,38">
+<ExtraParams>
+<PathToFile value="images/fraise1.png" />
+<PathToFile value="images/fraise2.png" />
+<PathToFile value="images/fraise3.png" />
+<PathToFile value="images/fraise4.png" />
+</ExtraParams>
+</CrocWidget>
+
+
+
+
+
+
+
+
+
+<CrocBarData>
+<WidgetData>
+<Alarm time="12:00" label="Lunch time" />
+</WidgetData>
+<WidgetData>
+<ToDo0 value="Update the git of the crocbar" />
+</WidgetData>
+<WidgetData>
+<ToDo0 value="Improve the crocbar code" />
+</WidgetData>
+</CrocBarData>
 
 </CrocBarConfiguration>

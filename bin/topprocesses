@@ -1,0 +1,2 @@
+#!/bin/bash
+top -bn 1 -U apvrille| grep "^ " | awk '{ printf("%s  %s\n", $9, $12); }' |head -n 5|tail -6

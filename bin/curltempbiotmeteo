@@ -1,0 +1,2 @@
+#!/bin/bash
+curl http://biotmeteo.free.fr/daytempdew.png > ../tmp/tempbiotmeteo.png

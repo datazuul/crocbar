@@ -1,0 +1,1 @@
+java -jar crocbar.jar config.xml
